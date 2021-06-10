@@ -24,7 +24,7 @@ function App() {
       Main Page Placeholder
       {loading && <h2>Loading data...</h2>}
       {error && <p>{error}</p>}
-      <UpcomingImages upcoming={upcoming}/>
+      {upcoming && <UpcomingImages upcoming={upcoming}/>}
     </div>
   );
 }
