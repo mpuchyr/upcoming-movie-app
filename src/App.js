@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react'; 
+import React, { useEffect, useState } from 'react';
+import UpcomingImages from './components/UpcomingImages';
 import './App.css';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       Main Page Placeholder
       {loading && <h2>Loading data...</h2>}
       {error && <p>{error}</p>}
+      <UpcomingImages upcoming={upcoming}/>
     </div>
   );
 }
