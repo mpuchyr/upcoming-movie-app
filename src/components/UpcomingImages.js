@@ -6,13 +6,18 @@ import { config } from 'react-spring';
 
 const UpcomingImages = ({ upcoming }) => {
     const [carouselSlides, setCarouselSlides] = useState([])
+    const [movieInfo, setMovieInfo] = useState(null)
+
+    const handleOnClick = (movie) => {
+        setMovieInfo(movie)
+    }
 
     useEffect(() => {
         const url = "https://image.tmdb.org/t/p/w500"
         const createSlides = () => {
             const slides = upcoming.results.map(movie => {
                 const source = `${url}/${movie.poster_path}`
-                return {key: uuidv4(), content: <img src={source} alt={movie.id} />}
+                return {key: uuidv4(), content: <img src={source} alt={movie.id} onClick={() => handleOnClick(movie)}/>}
             })
             setCarouselSlides(slides)
         }
@@ -20,7 +25,6 @@ const UpcomingImages = ({ upcoming }) => {
         createSlides()
     }, [])
 
-    console.log(upcoming)
 
 
     return (
