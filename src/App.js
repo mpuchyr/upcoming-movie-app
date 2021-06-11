@@ -10,12 +10,9 @@ function App() {
   const [error, setError] = useState(null)
   const [date, setDate] = useState(moment().format("YYYY-MM-DD"))
 
-  console.log(date)
-
 
   useEffect(() => {
     try {
-      // fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${process.env.REACT_APP_TMDB_ACCESS_TOKEN}&language=en-US&page=5`)
       fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_ACCESS_TOKEN}&language=en-US&include_adult=false&include_video=false&primary_release_date.gte=${date}`)
       .then(res => res.json())
       .then(data => setUpcoming(data))
