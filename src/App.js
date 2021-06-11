@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import UpcomingImages from './components/UpcomingImages';
+import Footer from './components/Footer';
 import moment from 'moment';
 import './App.css';
 
@@ -31,6 +32,7 @@ function App() {
       {loading && <h2>Loading data...</h2>}
       {error && <p>{error}</p>}
       {upcoming && <UpcomingImages upcoming={upcoming}/>}
+      <Footer />
     </div>
   );
 }
