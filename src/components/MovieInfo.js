@@ -4,7 +4,9 @@ const MovieInfo = ({movie}) => {
     console.log(movie)
     return (
         <div>
-            {movie.original_title}
+            <h1>{movie.original_title}</h1>
+            <h2>{movie.release_date}</h2>
+            <p>{movie.overview}</p>
         </div>
     )
 }
