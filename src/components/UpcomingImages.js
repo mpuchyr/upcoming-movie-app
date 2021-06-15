@@ -9,7 +9,7 @@ const UpcomingImages = ({ upcoming }) => {
     const [carouselSlides, setCarouselSlides] = useState([])
     const [movieInfo, setMovieInfo] = useState(null)
 
-    const handleOnClick = (movie, url) => {
+    const handleOnClick = (movie) => {
         setMovieInfo(movie)
     }
 
@@ -18,7 +18,7 @@ const UpcomingImages = ({ upcoming }) => {
         const createSlides = () => {
             const slides = upcoming.results.map(movie => {
                 const source = `${url}/${movie.poster_path}`
-                return {key: uuidv4(), content: <img src={source} alt={movie.id} onClick={() => handleOnClick(movie, url)}/>}
+                return {key: uuidv4(), content: <img src={source} alt={movie.id} onClick={() => handleOnClick(movie)}/>}
             })
             setCarouselSlides(slides)
         }
