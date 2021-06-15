@@ -29,6 +29,12 @@ code {
 
 .movie-info-container img {
   height: auto;
+  max-height: 500px;
   width: 300px;
+}
+
+.movie-info {
+  margin: 0 auto;
+  width: 250px;
 }
 

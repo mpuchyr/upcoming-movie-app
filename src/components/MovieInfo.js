@@ -6,9 +6,11 @@ const MovieInfo = ({movie}) => {
     return (
         <div className="movie-info-container">
             <img src={`${url}/${movie.poster_path}`} alt="movie poster"/>
-            <h1>{movie.original_title}</h1>
-            <h2>{movie.release_date}</h2>
-            <p>{movie.overview}</p>
+            <div className="movie-info">
+                <h1>{movie.original_title}</h1>
+                <h2>{movie.release_date}</h2>
+                <p>{movie.overview}</p>
+            </div>
         </div>
     )
 }
