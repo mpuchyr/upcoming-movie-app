@@ -36,7 +36,9 @@ const UpcomingImages = ({ upcoming }) => {
                 showNavigation={true}
                 animationConfig={config.gentle}
             />
+            <hr />
             {movieInfo && <MovieInfo movie={movieInfo}/>}
+            <hr />
             <Footer />
         </div>
     )
