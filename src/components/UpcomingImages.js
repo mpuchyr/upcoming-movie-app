@@ -4,6 +4,7 @@ import uuidv4 from "uuid";
 import Carousel from 'react-spring-3d-carousel';
 import { config } from 'react-spring';
 import MovieInfo from './MovieInfo';
+import Footer from './Footer';
 
 const UpcomingImages = ({ upcoming }) => {
     const [carouselSlides, setCarouselSlides] = useState([])
@@ -36,6 +37,7 @@ const UpcomingImages = ({ upcoming }) => {
                 animationConfig={config.gentle}
             />
             {movieInfo && <MovieInfo movie={movieInfo}/>}
+            <Footer />
         </div>
     )
 }

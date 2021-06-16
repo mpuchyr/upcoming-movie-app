@@ -28,7 +28,6 @@ function App() {
       {loading && <h2>Loading data...</h2>}
       {error && <p>{error}</p>}
       {upcoming && <UpcomingImages upcoming={upcoming}/>}
-
     </div>
   );
 }
