@@ -30,7 +30,7 @@ const UpcomingImages = ({ upcoming }) => {
 
 
     return (
-        <div style={{ width: "80%", height: "500px", margin: "0 auto" }}>
+        <div style={{ width: "50%", height: "500px", margin: "0 auto" }}>
             <Carousel 
                 slides={carouselSlides}
                 showNavigation={true}
