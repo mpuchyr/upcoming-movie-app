@@ -34,7 +34,7 @@ code {
 
 .movie-info-container img {
   height: auto;
-  max-height: 500px;
+  max-height: 450px;
   width: 300px;
 }
 
@@ -69,6 +69,10 @@ code {
 .upcoming-movie-container {
   margin: 0 auto;
   width: 50%
+}
+
+.upcoming-movie-container h1 {
+  font-family: 'Limelight', cursive;
 }
 
 
