@@ -17,8 +17,11 @@ const UpcomingImages = ({ upcoming }) => {
     useEffect(() => {
         const url = "https://image.tmdb.org/t/p/w500"
         const createSlides = () => {
-            const slides = upcoming.results.map(movie => {
+            const slides = upcoming.results.map((movie, index) => {
                 const source = `${url}/${movie.poster_path}`
+                if (index === 0) {
+                    setMovieInfo(movie)
+                }
                 return {key: uuidv4(), content: <img src={source} alt={movie.id} onClick={() => handleOnClick(movie)}/>}
             })
             setCarouselSlides(slides)
