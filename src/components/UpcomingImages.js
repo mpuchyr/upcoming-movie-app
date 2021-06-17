@@ -33,12 +33,14 @@ const UpcomingImages = ({ upcoming }) => {
 
 
     return (
-        <div style={{ width: "50%", height: "500px", margin: "0 auto" }}>
-            <Carousel 
-                slides={carouselSlides}
-                showNavigation={true}
-                animationConfig={config.gentle}
-            />
+        <div className="upcoming-movie-container">
+            <div className="carousel-container">
+                <Carousel 
+                    slides={carouselSlides}
+                    showNavigation={true}
+                    animationConfig={config.gentle}
+                />
+            </div>
             <hr />
             {movieInfo && <MovieInfo movie={movieInfo}/>}
             <hr />

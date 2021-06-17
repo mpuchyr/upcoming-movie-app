@@ -51,3 +51,33 @@ code {
   font-family: 'Limelight', cursive;
 }
 
+/* Carousel */
+.carousel-container {
+  height: 600px;
+  margin: 25px auto;
+  padding-bottom: 50px;
+  width: 100%,
+
+}
+
+
+.carousel-container img {
+  cursor: pointer;
+}
+
+/* Upcoming Movie Container */
+.upcoming-movie-container {
+  margin: 0 auto;
+  width: 50%
+}
+
+
+/* Footer */
+
+.footer {
+  height: 500px;
+  margin: 0 auto;
+  width: 80%
+}
+
+
