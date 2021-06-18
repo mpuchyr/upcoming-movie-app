@@ -34,7 +34,7 @@ const UpcomingImages = ({ upcoming }) => {
 
     return (
         <div className="upcoming-movie-container">
-            <h1 className="upcoming-movie-container-text">Upcoming Attractions</h1>
+            <h1 className="upcoming-movie-container-text">Upcoming Attractions</h1> 
             <div className="carousel-container">
                 <Carousel 
                     slides={carouselSlides}

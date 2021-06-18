@@ -53,9 +53,11 @@ code {
 
 /* Carousel */
 .carousel-container {
+  background-color: black;
+  border-radius: 10%;
   height: 600px;
   margin: 25px auto;
-  padding-bottom: 50px;
+  padding: 65px;
   width: 100%,
 
 }
