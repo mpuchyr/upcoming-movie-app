@@ -9,11 +9,13 @@ function App() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
   const [date, setDate] = useState(moment().format("YYYY-MM-DD"))
+  const token = process.env.REACT_APP_TMDB_ACCESS_TOKEN
+  const url = `https://api.themoviedb.org/3/discover/movie?api_key=${token}&language=en-US&include_adult=false&include_video=false&primary_release_date.gte=${date}`
 
 
   useEffect(() => {
     try {
-      fetch(`https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_ACCESS_TOKEN}&language=en-US&include_adult=false&include_video=false&primary_release_date.gte=${date}`)
+      fetch(url)
       .then(res => res.json())
       .then(data => setUpcoming(data))
     } catch {
