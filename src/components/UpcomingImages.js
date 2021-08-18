@@ -45,7 +45,6 @@ const UpcomingImages = ({ upcoming }) => {
             <hr />
             {movieInfo && <MovieInfo movie={movieInfo}/>}
             <hr />
-            <Footer />
         </div>
     )
 }
