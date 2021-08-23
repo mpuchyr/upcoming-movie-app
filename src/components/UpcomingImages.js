@@ -2,12 +2,10 @@ import React, { useEffect, useState } from 'react';
 import uuidv4 from "uuid";
 import Carousel from 'react-spring-3d-carousel';
 import { config } from 'react-spring';
-import MovieInfo from './MovieInfo';
 
 
-const UpcomingImages = ({ upcoming }) => {
+const UpcomingImages = ({ upcoming, setMovieInfo }) => {
     const [carouselSlides, setCarouselSlides] = useState([])
-    const [movieInfo, setMovieInfo] = useState(null)
 
     const handleOnClick = (movie) => {
         setMovieInfo(movie)
@@ -41,9 +39,6 @@ const UpcomingImages = ({ upcoming }) => {
                     animationConfig={config.gentle}
                 />
             </div>
-            <hr />
-            {movieInfo && <MovieInfo movie={movieInfo}/>}
-            <hr />
         </div>
     )
 }
