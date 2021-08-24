@@ -24,6 +24,11 @@ code {
 
 /* Movie Info */
 
+.main-container {
+  width: 80%;
+  margin: 10px auto;
+}
+
 .movie-info-container {
   border: 3px solid white;
   border-radius: 10%;

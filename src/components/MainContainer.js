@@ -16,7 +16,7 @@ const MainContainer = () => {
     useMovieFetch(date, setMovies, setLoading, setError)
     
     return (
-        <div>
+        <div className="main-container">
             {loading && <h2>Loading data...</h2>}
             {error && <p>{error}</p>}
             {movies && <UpcomingImages upcoming={movies} setMovieInfo={setMovieInfo}/>}
