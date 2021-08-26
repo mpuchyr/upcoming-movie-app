@@ -17,10 +17,9 @@ const MainContainer = () => {
     const [date, setDate] = useState(moment().format("YYYY-MM-DD"))
     const [movieInfo, setMovieInfo] = useState(null)
 
-    // useMovieFetch(date, setMovies, setLoading, setError)
-    // useEffect(() => {
-    //     fetchMovies(date, setMovies, setLoading, setError)
-    // }, [date])
+    useEffect(() => {
+        fetchMovies(date, setMovies, setLoading, setError)
+    }, [])
 
 
     const onChange = (date) => {
