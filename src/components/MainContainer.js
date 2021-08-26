@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import UpcomingImages from './UpcomingImages';
 import Footer from './Footer';
 import moment from 'moment';
@@ -6,6 +6,7 @@ import useMovieFetch from '../hooks/useMovieFetch';
 import MovieInfo from './MovieInfo';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
+import {fetchMovies} from '../actions/actions';
 
 
 
@@ -16,7 +17,11 @@ const MainContainer = () => {
     const [date, setDate] = useState(moment().format("YYYY-MM-DD"))
     const [movieInfo, setMovieInfo] = useState(null)
 
-    useMovieFetch(date, setMovies, setLoading, setError)
+    // useMovieFetch(date, setMovies, setLoading, setError)
+    // useEffect(() => {
+    //     fetchMovies(date, setMovies, setLoading, setError)
+    // }, [date])
+
 
     const onChange = (date) => {
         const month = date.toString().split(' ')[1]
@@ -26,12 +31,20 @@ const MainContainer = () => {
         setDate(newDate)
     }
 
+    const handleOnClick = () => {
+        fetchMovies(date, setMovies, setLoading, setError)
+    }
+
+
+
     return (
         <div className="main-container">
-            <DayPickerInput onDayChange={onChange} />
+            
             {loading && <h2>Loading data...</h2>}
             {error && <p>{error}</p>}
             {movies && <UpcomingImages upcoming={movies} setMovieInfo={setMovieInfo}/>}
+            <DayPickerInput onDayChange={onChange} />
+            <button onClick={handleOnClick}>Find Movies</button>
             <hr />
             {movieInfo && <MovieInfo movie={movieInfo} />}
             <hr />

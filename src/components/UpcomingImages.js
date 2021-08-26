@@ -25,7 +25,7 @@ const UpcomingImages = ({ upcoming, setMovieInfo }) => {
         }
 
         createSlides()
-    }, [])
+    }, [upcoming])
 
 
 
