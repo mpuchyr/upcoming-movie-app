@@ -23,11 +23,14 @@ const MainContainer = () => {
 
 
     const onChange = (date) => {
-        const month = date.toString().split(' ')[1]
-        const day = date.toString().split(' ')[2]
-        const year = date.toString().split(' ')[3]
-        const newDate = moment(`${month} ${day}, ${year}`).format("YYYY-MM-DD")
-        setDate(newDate)
+        if (date !== undefined) {
+            const month = date.toString().split(' ')[1]
+            const day = date.toString().split(' ')[2]
+            const year = date.toString().split(' ')[3]
+            const newDate = moment(`${month} ${day}, ${year}`).format("YYYY-MM-DD")
+            setDate(newDate)
+        }
+
     }
 
     const handleOnClick = () => {
