@@ -4,6 +4,10 @@ import Footer from './Footer';
 import moment from 'moment';
 import MovieInfo from './MovieInfo';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
+import {
+    formatDate,
+    parseDate,
+} from 'react-day-picker/moment';
 import 'react-day-picker/lib/style.css';
 import {fetchMovies} from '../actions/actions';
 
@@ -42,7 +46,12 @@ const MainContainer = () => {
             {loading && <h2>Loading data...</h2>}
             {error && <p>{error}</p>}
             {movies && <UpcomingImages upcoming={movies} setMovieInfo={setMovieInfo}/>}
-            <DayPickerInput onDayChange={onChange} />
+            <DayPickerInput 
+                onDayChange={onChange} 
+                formatDate={formatDate}
+                parseDate={parseDate}
+                placeholder={`${formatDate(new Date())}`}
+            />
             <button onClick={handleOnClick}>Find Movies</button>
             <hr />
             {movieInfo && <MovieInfo movie={movieInfo} />}
