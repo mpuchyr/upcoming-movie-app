@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import UpcomingImages from './UpcomingImages';
 import Footer from './Footer';
 import moment from 'moment';
-import useMovieFetch from '../hooks/useMovieFetch';
 import MovieInfo from './MovieInfo';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
@@ -36,8 +35,6 @@ const MainContainer = () => {
     const handleOnClick = () => {
         fetchMovies(date, setMovies, setLoading, setError)
     }
-
-
 
     return (
         <div className="main-container">
