@@ -80,6 +80,11 @@ code {
   font-size: 25px;
 }
 
+.date-container input {
+  font-family: 'Limelight', cursive;
+  font-size: 25px;
+}
+
 /* Upcoming Movie Container */
 .upcoming-movie-container {
   margin: 0 auto;
