@@ -48,7 +48,6 @@ const MainContainer = () => {
             {movies && <UpcomingImages upcoming={movies} setMovieInfo={setMovieInfo}/>}
             <div className="date-container">
                 <DayPickerInput
-                    id="date-picker-calendar"
                     onDayChange={onChange} 
                     formatDate={formatDate}
                     parseDate={parseDate}

@@ -74,10 +74,17 @@ code {
 }
 
 /* Date Picker */
+.date-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .date-container button {
   border-radius: 25px;
   font-family: 'Limelight', cursive;
   font-size: 25px;
+  width: 250px;
 }
 
 .date-container input {
