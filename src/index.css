@@ -73,6 +73,13 @@ code {
   cursor: pointer;
 }
 
+/* Date Picker */
+.date-container button {
+  border-radius: 25px;
+  font-family: 'Limelight', cursive;
+  font-size: 25px;
+}
+
 /* Upcoming Movie Container */
 .upcoming-movie-container {
   margin: 0 auto;

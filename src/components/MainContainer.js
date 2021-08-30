@@ -46,13 +46,15 @@ const MainContainer = () => {
             {loading && <h2>Loading data...</h2>}
             {error && <p>{error}</p>}
             {movies && <UpcomingImages upcoming={movies} setMovieInfo={setMovieInfo}/>}
-            <DayPickerInput 
-                onDayChange={onChange} 
-                formatDate={formatDate}
-                parseDate={parseDate}
-                placeholder={`${formatDate(new Date())}`}
-            />
-            <button onClick={handleOnClick}>Find Movies</button>
+            <div className="date-container">
+                <DayPickerInput 
+                    onDayChange={onChange} 
+                    formatDate={formatDate}
+                    parseDate={parseDate}
+                    placeholder={`${formatDate(new Date())}`}
+                />
+                <button onClick={handleOnClick}>Find Movies</button>
+            </div>
             <hr />
             {movieInfo && <MovieInfo movie={movieInfo} />}
             <hr />
